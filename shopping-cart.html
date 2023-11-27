@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./shop.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Add this to the head section of your HTML document -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Optional: You can include Bootstrap's JavaScript and Popper.js if you need them -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  <title>amazeKart by fetch API</title>
+</head>
+<body>
+ <header>
+  
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">amazeKart</a>
+
+      <div class="cart">
+      
+
+        <button type="button" id="cart-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count-info"></span>
+        </button>
+
+      
+
+
+        
+        </div>
+      
+    </nav>
+
+    </header>
+    <div class="cart-container">
+        <button type="button" class="cart-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="cart-list">
+          <h2 style="text-align:center;color:var(--fire-bush)"><u>Your Cart</u> </h2>
+          <!-- Your existing cart-list content -->
+        </div>
+        
+        <div class="cart-total">
+          <h3>Total: $</h3>
+          <span id="cart-total-value"></span>
+        </div>
+      </div>
+      <div class="cart-overlay"></div>
+
+<div class="page_header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-xs-12 col-sm-6">
+                    <h1> Shopping Cart </h1>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+                    <div class="sub_title_section">
+                        <ul class="sub_title">
+                            <li> <a href="#"> Home </a> <i class="fa fa-angle-right" aria-hidden="true"></i> </li>
+                            <li> Shopping Cart  </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart_product_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="shop_head">
+                        <h1>Your cart Products (04)</h1>
+                    </div>
+                </div>
+                <div class="shop_cart_page_wrapper">
+                    <div class="row">
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div class="table-responsive cart-calculations">
+                            <table class="table">
+
+                                <thead class="cart_table_heading">
+                                    <tr>
+                                        <th>item</th>
+
+                                        <th>product</th>
+                                        <th>&nbsp;</th>
+                                        <th> price</th>
+
+                                        <th>Quantity</th>
+
+                                        <th>Total price</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>
+                                            <div class="table_cart_img">
+                                                <figure>
+                                                    <img src="images/shop/cart_1.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="table_cart_cntnt">
+                                                <h1>SATIN ONE PIECE</h1>
+                                                <p>color : black </p>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td class="cart_page_price">$199.00</td>
+                                        <td>
+                                            <input value="1" type="number">
+                                        </td>
+                                        <td class="cart_page_totl">$299.00</td>
+                                        <td>
+                                            <a href="#"> <i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            2
+                                        </td>
+                                        <td>
+                                            <div class="table_cart_img">
+                                                <figure>
+                                                    <img src="images/shop/cart_2.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="table_cart_cntnt">
+                                                <h1>FLORAL PRINT TOP</h1>
+                                                <p>color : black </p>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td class="cart_page_price">$199.00</td>
+                                        <td>
+                                            <input value="1" type="number">
+                                        </td>
+                                        <td class="cart_page_totl">$399.00</td>
+                                        <td>
+                                            <a href="#"> <i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            3
+                                        </td>
+                                        <td>
+                                            <div class="table_cart_img">
+                                                <figure>
+                                                    <img src="images/shop/cart_3.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="table_cart_cntnt">
+                                                <h1>CREPE FROCK</h1>
+                                                <p>color : black </p>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td class="cart_page_price">$99.00</td>
+                                        <td>
+                                            <input value="1" type="number">
+                                        </td>
+                                        <td class="cart_page_totl">$199.00</td>
+                                        <td>
+                                            <a href="#"> <i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            4
+                                        </td>
+                                        <td>
+                                            <div class="table_cart_img">
+                                                <figure>
+                                                    <img src="images/shop/cart_4.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="table_cart_cntnt">
+                                                <h1>TUNIC LONG TOP</h1>
+                                                <p>color : black </p>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td class="cart_page_price">$199.00</td>
+                                        <td>
+                                            <input value="1" type="number">
+                                        </td>
+                                        <td class="cart_page_totl">$299.00</td>
+                                        <td>
+                                            <a href="#"> <i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td> </td>
+                                        <td class="shop_btn_wrapper shop_car_btn_wrapper">
+
+                                            <ul>
+                                                <li><a href="#">continue shopping</a>
+                                                </li>
+                                            </ul>
+
+                                        </td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td></td>
+
+                                        <td class="cart_btn_cntnt"> Sub Total : <span>$1192.00 </span> </td>
+                                        <td></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="estimate_shiping_Wrapper_cntnt estimate_shiping_Wrapper_cntnt_2">
+                            <div class="shop_head ">
+                                <h1>coupan code enter here : </h1>
+                                <div class="lr_nl_form_wrapper">
+                                    <input type="text" placeholder="Type Your Code">
+                                    <button type="submit">apply</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                        <div class="shipping_Wrapper">
+                            <div class="shop_head">
+                                <h1>estimate shipping </h1>
+                            </div>
+                            <div class="estimate_shiping_Wrapper_cntnt">
+                                <div class="custome-select style2">
+                                    <span>Select country <i class="fa fa-angle-down"></i></span>
+                                    <select>
+                                        <option>India</option>
+                                        <option>United States</option>
+                                        <option>Austraila</option>
+                                        <option>London</option>
+                                    </select>
+                                </div>
+
+                                <div class="custome-select style2">
+                                    <span>Select State <i class="fa fa-angle-down"></i></span>
+                                    <select>
+                                        <option>India</option>
+                                        <option>United States</option>
+                                        <option>Austraila</option>
+                                        <option>London</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Enter ZIP code">
+                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
+                                    <ul>
+                                        <li><a href="#">check</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="estimate_shiping_Wrapper_cntnt estimate_shiping_Wrapper_repsnse">
+
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Sub Total : </th>
+                                            <td><span class="price">$1,00.00</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>IGST 18% :</th>
+                                            <td><span class="price">$200.00</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>CGST 20% :</th>
+                                            <td><span class="price">$200.00</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th> Discount:</th>
+                                            <td><span class="price">-$200.00</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="cart_btn_cntnt"> Sub Total :</th>
+                                            <td><span class="cart_btn_cntnt_clr">$1192.00 </span> </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
+                                    <ul>
+                                        <li><a href="#">checkout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+<footer>
+  
+    <div class="container">
+      <div class="social-icons">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-pinterest"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  </body>
+
+  <script>
+   $(document).ready(function() {
+    // Hide the cart container on page load
+    $(".cart-container, .cart-overlay").hide();
+
+    // Show the popup and overlay when the cart button is clicked
+    $("#cart-btn").on("click", function() {
+        $(".cart-overlay, .cart-container").show();
+    });
+
+    // Hide the popup and overlay when the close button is clicked
+    $(".cart-container").on("click", ".cart-close-btn", function() {
+        $(".cart-overlay, .cart-container").hide();
+    });
+});
+
+function continueShopping() {
+    // Redirect to the index page or any other desired page
+    window.location.href = "index.html";
+}
+
+function goToCartPage() {
+    // Redirect to the cart page
+    window.location.href = "shopping-cart.html";
+}
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+  
+  <!-- <script src="index.js"></script> -->
+  </body>
+  </html>
